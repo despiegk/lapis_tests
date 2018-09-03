@@ -1,0 +1,6 @@
+local redis = require("redis")
+local rclient = redis.connect('127.0.0.1', 6379)
+rclient.set("a","bbb")
+print(rclient.get("a"))
+print(rclient.ping())
+return print("aaaaa")
